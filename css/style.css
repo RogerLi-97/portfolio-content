@@ -33,3 +33,7 @@ img {
 img:hover {
     box-shadow: 10px 10px 5px lightblue;
 }
+
+.current-page {
+    font-weight: bold;
+}
