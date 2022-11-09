@@ -1,0 +1,42 @@
+/* CSS for grand slam page grid container */
+
+aside {
+    width: 80%;
+    padding-left: .5rem;
+    margin-left: .5rem;
+    float: right;
+    box-shadow: inset 5px 0 5px -5px #29627e;
+    font-style: italic;
+    color: #29627e;
+}
+
+aside>p {
+    margin: .5rem;
+}
+
+/* Mobile View */
+img {
+    width: 80%;
+}
+
+main p {
+    text-align: center;
+}
+
+.moments {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.moments {
+    row-gap: 5px;
+    width: 90%;
+}
+
+.moment {
+    border: 2px solid black;
+}
+
+.moment h3 {
+    text-align: center;
+}

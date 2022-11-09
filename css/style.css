@@ -1,6 +1,31 @@
 body {
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: antiquewhite;
+}
+
+/* skip to main content */
+.skip a {
+    background: white;
+    left: 0;
+    padding: 6px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+    position: absolute;
+    left: -500px;
+    top: -40px;
+}
+
+.skip a:focus {
+    background: white;
+    top: 0;
+    left: 0;
+    padding: 6px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+    position: absolute;
 }
 
 h1 {
@@ -14,6 +39,7 @@ h2 {
     font-size: 1.5em;
     text-decoration: underline;
     margin-bottom: 0.5em;
+    text-align: center;
 }
 
 h3 {
@@ -23,14 +49,15 @@ h3 {
 }
 
 section {
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
 }
 
 article {
-    font-family: lato, Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: bold;
     padding: 0.5em;
     border: 2px dashed black;
+    background-image: url(../images/white_background.jpg);
     background-color: lightblue;
 }
 
@@ -54,36 +81,61 @@ figure {
     align-content: start;
 }
 
-img {
-    margin: 0.5em auto;
-    border: 2px dashed orange;
-    width: 60%;
-    padding: 0;
+footer {
+    text-align: center;
+    padding: 20px;
 }
 
 img:hover {
     box-shadow: 10px 10px 5px lightblue;
 }
 
+/* Common Grid Properties for all pages */
+/* Mobile View */
+img {
+    margin: 0.5em auto;
+    border: 2px dashed orange;
+    width: 80%;
+    padding: 0;
+}
+
+.container, main {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.container {
+    row-gap: 15px;
+}
+
+main {
+    row-gap: 10px;
+    justify-items: center;
+}
+
+/* Animation for home image */
+@keyframes zoomin {
+    from {
+        width: 30%;
+    }
+    to {
+        width: 80%;
+    }
+}
+
+#home-image {
+    animation-name: zoomin;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+}
+
+@media (prefers-reduced-motion) {
+    #home-image {
+        animation: none;
+    }
+}
+/* ------------------------- */
+
 .current-page {
     font-weight: bold;
-}
-
-/* Styles for Gallery */
-.wimbledon {
-    display: grid;
-    grid-template: 2em repeat(5, 1fr) / repeat(2, 1fr);
-    justify-content: end;
-    width: 90%;
-    margin: 0 auto;
-    background-color: lightgreen;
-}
-
-.wimbledon img {
-    width: 95%;
-}
-
-.gallery-title {
-    grid-column: 1 / -1;
-    justify-self: center;
 }

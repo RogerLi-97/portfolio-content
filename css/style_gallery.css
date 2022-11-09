@@ -1,0 +1,21 @@
+/* Styles for Gallery */
+.wimbledon {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    background-color: aliceblue;
+}
+
+.wimbledon img {
+    width: 95%;
+}
+
+.gallery-title {
+    align-self: center;
+}
+
+figcaption {
+    font-weight: bold;
+    padding-bottom: .5rem;
+}
