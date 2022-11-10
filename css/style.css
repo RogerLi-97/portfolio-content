@@ -113,6 +113,44 @@ main {
     justify-items: center;
 }
 
+/* CSS for grand slam page */
+aside {
+    width: 80%;
+    padding-left: .5rem;
+    margin-left: .5rem;
+    float: right;
+    box-shadow: inset 5px 0 5px -5px #29627e;
+    font-style: italic;
+    color: #29627e;
+}
+
+aside>p {
+    margin: .5rem;
+}
+
+.grand-slam p {
+    text-align: center;
+}
+
+.moments {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.moments {
+    row-gap: 5px;
+    width: 90%;
+}
+
+.moment {
+    border: 2px solid black;
+}
+
+.moment h3 {
+    text-align: center;
+}
+
+
 /* Animation for home image */
 @keyframes zoomin {
     from {
@@ -138,4 +176,26 @@ main {
 
 .current-page {
     font-weight: bold;
+}
+
+/* Styles for Gallery */
+.wimbledon {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    background-color: aliceblue;
+}
+
+.wimbledon img {
+    width: 95%;
+}
+
+.gallery-title {
+    align-self: center;
+}
+
+figcaption {
+    font-weight: bold;
+    padding-bottom: .5rem;
 }
