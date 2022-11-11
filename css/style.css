@@ -72,7 +72,7 @@ nav ul {
 
 nav ul li {
     display: inline-block;
-    padding: 1em;
+    padding: 1rem;
 }
 
 figure {
@@ -92,6 +92,11 @@ img:hover {
 
 /* Common Grid Properties for all pages */
 /* Mobile View */
+nav ul {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
 img {
     margin: 0.5em auto;
     border: 2px dashed orange;
@@ -198,4 +203,11 @@ aside>p {
 figcaption {
     font-weight: bold;
     padding-bottom: .5rem;
+}
+
+/* Tablet View */
+@media all and (min-width: 426px) {
+    nav ul {
+        display: block;
+    }
 }
