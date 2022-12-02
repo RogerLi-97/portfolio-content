@@ -155,6 +155,12 @@ aside>p {
     margin: .5rem;
 }
 
+#notice {
+    margin: .5rem;
+    color: #29627e;
+    font-style: italic;
+}
+
 .grand-slam p {
     text-align: center;
 }
