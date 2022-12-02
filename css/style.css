@@ -104,7 +104,8 @@ img {
     padding: 0;
 }
 
-.container, main {
+.container,
+main {
     display: grid;
     grid-template-columns: 1fr;
 }
@@ -116,6 +117,27 @@ img {
 main {
     row-gap: 10px;
     justify-items: center;
+}
+
+/* Form style */
+#contact-title {
+    text-align: center;
+    margin: 1rem 0;
+    font-weight: lighter;
+    text-decoration: underline;
+}
+
+#contact-form {
+    justify-self: stretch;
+    border: 2px dashed black;
+}
+
+form {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 1rem;
+    justify-items: center;
+    padding: 1rem;
 }
 
 /* CSS for grand slam page */
@@ -161,6 +183,7 @@ aside>p {
     from {
         width: 30%;
     }
+
     to {
         width: 80%;
     }
@@ -177,6 +200,7 @@ aside>p {
         animation: none;
     }
 }
+
 /* ------------------------- */
 
 .current-page {
@@ -205,9 +229,59 @@ figcaption {
     padding-bottom: .5rem;
 }
 
-/* Tablet View */
-@media all and (min-width: 426px) {
+/* Tablet View only for nav bar */
+@media all and (min-width: 512px) {
+
+    /* navigation bar */
     nav ul {
         display: block;
+    }
+}
+
+/* Tablet View for Gallery */
+@media all and (min-width: 820px) {
+    .wimbledon {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .gallery-title {
+        width: 100%;
+        text-align: center;
+    }
+
+    .wimbledon figure {
+        width: 45%;
+    }
+}
+
+/* Desktop View */
+@media all and (min-width: 1024px) {
+    #laver-cup {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .moments {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 5px;
+    }
+
+    #moments-title {
+        grid-column: 1 / -1;
+    }
+
+    #career-info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .wimbledon {
+        justify-content: space-between;
+    }
+
+    .wimbledon figure {
+        width: 33%;
     }
 }

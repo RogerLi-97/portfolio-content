@@ -4,6 +4,7 @@
 <html lang="en">
   <head>
     <title>Federer Career Moment</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="./css/html5reset.css" />
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,6 +17,20 @@
       src="https://kit.fontawesome.com/e28ac32e2d.js"
       crossorigin="anonymous"
     ></script>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-1201M2NH09"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-1201M2NH09");
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
 
@@ -59,15 +74,15 @@
             Federer played during an era where he dominated men's tennis along
             with Rafael Nadal and Novak Djokovic as the Big Three, collectively
             considered by some to be the three most successful male tennis
-            players of all time. A Wimbledon junior champion in 1998 and
-            former ball boy, Federer won his first major singles title at
-            Wimbledon in 2003 at age 21.
+            players of all time. A Wimbledon junior champion in 1998 and former
+            ball boy, Federer won his first major singles title at Wimbledon in
+            2003 at age 21.
           </p>
         </section>
         <section>
           <h2>Last tour in his career</h2>
           <p>Laver Cup in London, Sept 23-25, 2022</p>
-          <figure>
+          <figure id="laver-cup">
             <img
               src="./images/Big4hero_lavercup.jpg"
               alt="a photo of the Big 4 on Laver Cup"
@@ -172,6 +187,22 @@
             Roger Federer
           </p>
         </article>
+
+        <!-- contact form -->
+        <div id="contact-form">
+          <h3 id="contact-title">Contact form:</h3>
+          <form action="https://formspree.io/f/xyyvqpvn" method="POST">
+            <label>
+              Your email:
+              <input type="email" name="email" />
+            </label>
+            <label>
+              Your message:
+              <input type="text" name="message" />
+            </label>
+            <button type="submit">Send</button>
+          </form>
+        </div>
       </main>
 
       <footer>
